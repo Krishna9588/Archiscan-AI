@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archiscan AI: A Strategic Proposal for Vision Consulting</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #008080 0%, #004d4d 100%);
+        }
+        .accent-color { color: #008080; }
+        .accent-bg { background-color: #008080; }
+        .accent-border { border-color: #008080; }
+        .secondary-accent-color { color: #f59e0b; }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .custom-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 64px;
+            height: 64px;
+            border-radius: 0.5rem;
+            margin: 0 auto 1rem;
+        }
+        .flow-step-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #004d4d;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold accent-color">Archiscan AI</div>
+            <div class="hidden md:flex space-x-8 font-semibold text-slate-600">
+                <a href="#problem" class="hover:accent-color transition-colors">Problem</a>
+                <a href="#solution" class="hover:accent-color transition-colors">Solution</a>
+                <a href="#roi" class="hover:accent-color transition-colors">ROI</a>
+                <a href="#plan" class="hover:accent-color transition-colors">Roadmap</a>
+                <a href="#budget" class="hover:accent-color transition-colors">Budget</a>
+            </div>
+            <a href="#contact" class="hidden md:inline-block accent-bg text-white font-semibold px-6 py-2 rounded-lg hover:opacity-90 transition-opacity">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero-gradient text-white">
+        <div class="container mx-auto px-6 py-24 md:py-32 text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">Gaining a Competitive Edge with AI-Powered Surveying</h1>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-slate-300">A proposal to develop Archiscan AI: an in-house platform using drones and AI to streamline your workflow, eliminate risk, and deliver project data with unprecedented speed and accuracy.</p>
+            <a href="#problem" class="accent-bg text-white font-bold px-8 py-4 rounded-lg text-lg hover:opacity-90 transition-transform duration-300 inline-block">Explore the Technology</a>
+        </div>
+    </section>
+
+    <section id="team" class="bg-slate-50 scroll-mt-20">
+        <div class="container mx-auto px-6 py-16 text-center">
+            <h2 class="text-3xl font-bold text-slate-800 mb-3">Meet the Team</h2>
+            <p class="text-lg text-slate-500 max-w-2xl mx-auto mb-8">A dedicated group of final-year engineering students passionate about technology and innovation.</p>
+            <div class="flex flex-wrap justify-center gap-8">
+                <div class="text-center">
+                    <img class="w-24 h-24 rounded-full mx-auto mb-2 object-cover border-4 border-white shadow-lg" src="https://placehold.co/96x96/c4b5fd/4338ca?text=K" alt="Photo of Krishna Birla">
+                    <h4 class="text-lg font-semibold">Krishna Birla</h4>
+                    <p class="text-slate-500">Team Lead & Strategist</p>
+                </div>
+                <div class="text-center">
+                    <img class="w-24 h-24 rounded-full mx-auto mb-2 object-cover border-4 border-white shadow-lg" src="https://placehold.co/96x96/a7f3d0/047857?text=N" alt="Photo of Nimish">
+                    <h4 class="text-lg font-semibold">Nimish</h4>
+                    <p class="text-slate-500">AI & Software Lead</p>
+                </div>
+                <div class="text-center">
+                    <img class="w-24 h-24 rounded-full mx-auto mb-2 object-cover border-4 border-white shadow-lg" src="https://placehold.co/96x96/bae6fd/0c4a6e?text=R" alt="Photo of Ricky">
+                    <h4 class="text-lg font-semibold">Ricky</h4>
+                    <p class="text-slate-500">Hardware & Robotics Lead</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="container mx-auto px-6 py-16 md:py-24 space-y-24 md:space-y-32">
+
+        <section id="problem" class="scroll-mt-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-3">The Core Consulting Problem: Inefficiency and Risk</h2>
+                <p class="text-lg text-slate-500 max-w-3xl mx-auto">The current method for creating "as-built" drawings is slow and unreliable, causing delays and financial risk that impact your ability to deliver value.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card p-8">
+                     <h3 class="text-xl font-bold mb-4">Key Pain Points</h3>
+                     <ul class="space-y-4">
+                        <li class="flex items-start"><div class="custom-icon w-16 h-16 flex-shrink-0 mr-4 bg-teal-50"><div class="text-3xl">⏳</div></div><div><strong class="block">Operational Inefficiency</strong>Projects are delayed by weeks due to slow, manual surveying and drafting.</div></li>
+                        <li class="flex items-start"><div class="custom-icon w-16 h-16 flex-shrink-0 mr-4 bg-red-50"><div class="text-3xl font-bold">₹</div></div><div><strong class="block">Financial Risk</strong>Inaccuracies lead to rework, with potential costs of ₹20-50 Lakhs on a ₹10 Cr project.</div></li>
+                        <li class="flex items-start"><div class="custom-icon w-16 h-16 flex-shrink-0 mr-4 bg-blue-50"><div class="text-3xl">🧩</div></div><div><strong class="block">Limited Strategic Insight</strong>Static 2D plans are "dumb data," preventing advanced digital twin services.</div></li>
+                     </ul>
+                </div>
+                <div class="card p-8">
+                    <h3 class="text-xl font-bold mb-4">Visualizing the Financial Risk</h3>
+                    <p class="text-slate-500 mb-4">This chart illustrates the potential rework costs from survey inaccuracies on a typical ₹10 Crore project.</p>
+                    <div class="chart-container">
+                        <canvas id="riskChart"></canvas>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-slate-200">
+                        <p class="text-sm text-slate-600"><strong class="accent-color">Key Takeaway:</strong> Manual surveys introduce a significant financial liability. Our technology nearly eliminates this risk, protecting client budgets and your firm's reputation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="scroll-mt-20">
+             <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-3">How It Works: From Site to Digital Twin</h2>
+                <p class="text-lg text-slate-500 max-w-3xl mx-auto">A streamlined, three-step process to replace weeks of manual work.</p>
+            </div>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+                <div class="text-center">
+                    <div class="flow-step-icon mx-auto">1</div>
+                    <h4 class="font-bold my-2">On-Site Data Capture</h4>
+                    <p class="text-slate-500 text-sm max-w-xs">A pilot uses the drone to scan a building in a single visit, capturing LiDAR data.</p>
+                </div>
+                <div class="w-16 h-px md:w-auto md:h-px md:flex-1 bg-slate-300 my-4 md:my-0"></div>
+                 <div class="text-center">
+                    <div class="flow-step-icon mx-auto">2</div>
+                    <h4 class="font-bold my-2">AI Cloud Processing</h4>
+                    <p class="text-slate-500 text-sm max-w-xs">Raw 3D data is uploaded, and our AI automatically analyzes it, identifying key features.</p>
+                </div>
+                <div class="w-16 h-px md:w-auto md:h-px md:flex-1 bg-slate-300 my-4 md:my-0"></div>
+                 <div class="text-center">
+                    <div class="flow-step-icon mx-auto">3</div>
+                    <h4 class="font-bold my-2">Digital Twin Delivery</h4>
+                    <p class="text-slate-500 text-sm max-w-xs">An accurate 2D floor plan and 3D model are delivered, ready for CAD and analysis.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="solution" class="scroll-mt-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-3">The Technology Breakdown</h2>
+                <p class="text-lg text-slate-500 max-w-3xl mx-auto">Our solution combines modern hardware with smart software to create a complete system.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card p-8">
+                    <h3 class="text-2xl font-bold mb-4">The Physical Tool: Data Capture Drone</h3>
+                    <p class="text-slate-500 mb-4">A custom-built drone for safe, pilot-guided indoor navigation.</p>
+                    <div class="bg-slate-50 p-4 rounded-lg">
+                        <h4 class="font-semibold mb-2">Key Components:</h4>
+                        <ul class="text-sm text-slate-600 list-disc list-inside space-y-1">
+                            <li>RPLIDAR A1/A2 for 2D mapping</li>
+                            <li>Raspberry Pi 4/5 for onboard computing</li>
+                            <li>RunCam HD camera system</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card p-8">
+                    <h3 class="text-2xl font-bold mb-4">The Software Engine: Our AI Core</h3>
+                    <p class="text-slate-500 mb-4">Your future IP: a software pipeline that turns raw data into useful information.</p>
+                     <div class="bg-slate-50 p-4 rounded-lg">
+                        <h4 class="font-semibold mb-2">Technology Stack:</h4>
+                        <ul class="text-sm text-slate-600 list-disc list-inside space-y-1">
+                            <li>Python for core logic and AI</li>
+                            <li>TensorFlow/PyTorch for AI models</li>
+                            <li>OpenCV for computer vision tasks</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="roi" class="scroll-mt-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-3">A Clear Return on Investment</h2>
+                <p class="text-lg text-slate-500 max-w-3xl mx-auto">This technology creates a powerful new value proposition for your firm and clients.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card p-8">
+                    <h3 class="text-xl font-bold mb-4">Project Timeline Comparison</h3>
+                    <p class="text-slate-500 mb-4">Our solution removes the initial surveying bottleneck, allowing project planning to begin almost immediately.</p>
+                    <div class="chart-container">
+                        <canvas id="timelineChart"></canvas>
+                    </div>
+                     <div class="mt-4 pt-4 border-t border-slate-200">
+                        <p class="text-sm text-slate-600"><strong class="accent-color">Key Takeaway:</strong> By reducing the initial data capture phase from 3 weeks to 2 days, your team can start the high-value planning and advisory work much sooner, increasing project velocity.</p>
+                    </div>
+                </div>
+                <div class="card p-8 flex flex-col justify-center text-center">
+                     <h3 class="text-xl font-bold mb-4">New Revenue Potential (Year 1)</h3>
+                     <p class="text-slate-500">Based on a conservative price of ₹5/sq. ft., just 10 mid-sized projects could generate:</p>
+                     <p class="text-6xl font-extrabold secondary-accent-color my-4">₹25 Lakhs</p>
+                     <p class="text-lg font-semibold">in new, high-margin revenue.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="plan" class="scroll-mt-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-3">The 6-Month Roadmap</h2>
+                <p class="text-lg text-slate-500 max-w-3xl mx-auto">A transparent, milestone-driven plan to deliver a functional prototype and all associated IP.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card p-6">
+                    <p class="font-bold text-sm accent-color">MONTH 1</p>
+                    <h4 class="text-lg font-semibold mt-1 mb-2">Foundation & Assembly</h4>
+                    <p class="text-slate-500 text-sm">Finalize architecture, order all hardware, and assemble the physical drone prototype.</p>
+                </div>
+                <div class="card p-6">
+                    <p class="font-bold text-sm accent-color">MONTH 2</p>
+                    <h4 class="text-lg font-semibold mt-1 mb-2">Core Navigation (SLAM)</h4>
+                    <p class="text-slate-500 text-sm"><strong class="text-slate-600">Deliverable:</strong> Demonstrate stable, real-time 3D mapping in a test environment.</p>
+                </div>
+                <div class="card p-6">
+                    <p class="font-bold text-sm accent-color">MONTH 3</p>
+                    <h4 class="text-lg font-semibold mt-1 mb-2">Pilot-Assist & AI Dev</h4>
+                    <p class="text-slate-500 text-sm">Demonstrate guided flight and begin training the initial AI segmentation model.</p>
+                </div>
+                <div class="card p-6">
+                    <p class="font-bold text-sm accent-color">MONTH 4</p>
+                    <h4 class="text-lg font-semibold mt-1 mb-2">Full System Integration</h4>
+                    <p class="text-slate-500 text-sm"><strong class="text-slate-600">Deliverable:</strong> First end-to-end test run, from data capture to initial AI output.</p>
+                </div>
+                <div class="card p-6">
+                    <p class="font-bold text-sm accent-color">MONTH 5</p>
+                    <h4 class="text-lg font-semibold mt-1 mb-2">Refinement & Finalization</h4>
+                    <p class="text-slate-500 text-sm"><strong class="text-slate-600">Deliverable:</strong> Final prototype demonstration at a commercial property.</p>
+                </div>
+                <div class="card p-6">
+                    <p class="font-bold text-sm accent-color">MONTH 6</p>
+                    <h4 class="text-lg font-semibold mt-1 mb-2">Documentation & Handover</h4>
+                    <p class="text-sm"><strong>Final Deliverable:</strong> Official project presentation and complete handover of all IP.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="budget" class="scroll-mt-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-3">A Transparent Sponsorship Request</h2>
+                <p class="text-lg text-slate-500 max-w-3xl mx-auto">We are seeking a one-time sponsorship of ₹1 Lakh to cover the R&D costs for this prototype. All hardware procured becomes the property of Vision Consulting.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="md:col-span-2 card p-8 overflow-x-auto">
+                    <table class="w-full text-left">
+                        <thead class="border-b-2 border-slate-200"><tr><th class="py-2 pr-4 font-semibold">Category</th><th class="py-2 px-4 font-semibold">Item</th><th class="py-2 pl-4 font-semibold text-right">Cost (₹)</th></tr></thead>
+                        <tbody>
+                            <tr class="border-b border-slate-100"><td class="py-2 font-bold text-slate-600" colspan="3">Drone Components</td></tr>
+                            <tr><td class="py-2 pr-4"></td><td class="py-2 px-4">Frame, Motors & ESCs</td><td class="py-2 pl-4 text-right">11,000</td></tr>
+                            <tr><td class="py-2 pr-4"></td><td class="py-2 px-4">Flight Controller & GPS</td><td class="py-2 pl-4 text-right">7,000</td></tr>
+                            <tr><td class="py-2 pr-4"></td><td class="py-2 px-4">Radio Tx & Rx</td><td class="py-2 pl-4 text-right">8,000</td></tr>
+                            <tr><td class="py-2 pr-4"></td><td class="py-2 px-4">Batteries & Propellers</td><td class="py-2 pl-4 text-right">5,000</td></tr>
+                            <tr class="border-b border-slate-100"><td class="py-2 font-bold text-slate-600" colspan="3">Sensing & Computing</td></tr>
+                            <tr><td class="py-2 pr-4"></td><td class="py-2 px-4">Mapping LiDAR Sensor</td><td class="py-2 pl-4 text-right">15,000</td></tr>
+                            <tr><td class="py-2 pr-4"></td><td class="py-2 px-4">HD & FPV Cameras</td><td class="py-2 pl-4 text-right">15,000</td></tr>
+                            <tr><td class="py-2 pr-4"></td><td class="py-2 px-4">Onboard Computer</td><td class="py-2 pl-4 text-right">10,000</td></tr>
+                             <tr class="border-b border-slate-100"><td class="py-2 font-bold text-slate-600" colspan="3">Software & Tools</td></tr>
+                            <tr><td class="py-2 pr-4"></td><td class="py-2 px-4">Cloud Credits</td><td class="py-2 pl-4 text-right">10,000</td></tr>
+                            <tr><td class="py-2 pr-4"></td><td class="py-2 px-4">Tools & Miscellaneous</td><td class="py-2 pl-4 text-right">5,000</td></tr>
+                        </tbody>
+                        <tfoot>
+                            <tr class="border-t-2 border-slate-200"><td class="py-3 pr-4 font-bold" colspan="2">Subtotal</td><td class="py-3 pl-4 font-bold text-right">86,000</td></tr>
+                            <tr class="border-t border-slate-100"><td class="py-3 pr-4 font-bold" colspan="2">Contingency (15% Buffer)</td><td class="py-3 pl-4 font-bold text-right">14,000</td></tr>
+                            <tr class="border-t-2 border-slate-200 accent-bg text-white"><td class="py-4 px-4 font-extrabold text-lg" colspan="2">GRAND TOTAL</td><td class="py-4 px-4 font-extrabold text-lg text-right">1,00,000</td></tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <div class="card p-8 flex flex-col">
+                    <h3 class="text-xl font-bold mb-4">Budget Allocation</h3>
+                    <div class="chart-container flex-grow">
+                        <canvas id="budgetChart"></canvas>
+                    </div>
+                     <div class="mt-4 pt-4 border-t border-slate-200">
+                        <p class="text-sm text-slate-600"><strong class="accent-color">Key Takeaway:</strong> The majority of the budget is allocated to the core sensing and computing hardware, which forms the foundation of the technology and becomes a valuable asset for your firm.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="vision" class="scroll-mt-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-3">Our Commitment to Vision Consulting</h2>
+                <p class="text-lg text-slate-500 max-w-3xl mx-auto">This is more than an academic project; it is the foundation of a long-term, mutually beneficial partnership.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card p-8"><h3 class="text-xl font-bold mb-2">Your Intellectual Property</h3><p class="text-slate-500">All software, algorithms, and processes developed will be the exclusive IP of Vision Consulting. We will sign a standard IP assignment agreement.</p></div>
+                <div class="card p-8"><h3 class="text-xl font-bold mb-2">Transparent Communication</h3><p class="text-slate-500">We will provide bi-weekly email updates and a monthly progress presentation to our project sponsor. A single team member will be your dedicated point of contact.</p></div>
+                <div class="card p-8"><h3 class="text-xl font-bold mb-2">A Future Together</h3><p class="text-slate-500">Our primary ambition is to incubate this project within Vision Consulting and transition into full-time roles upon graduation to lead this new service line.</p></div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contact" class="hero-gradient text-white scroll-mt-20">
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid md:grid-cols-2 gap-8 text-center md:text-left">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Key References & Research</h3>
+                    <ul class="space-y-2 text-slate-300">
+                        <li><a href="#" class="hover:text-white transition-colors">The Rise of Digital Twins in AEC</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Advancements in LiDAR SLAM Technology</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Market Report: AI in the Construction Industry</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Generative AI for Architectural Design</a></li>
+                    </ul>
+                </div>
+                <div class="md:text-right">
+                    <h3 class="text-xl font-bold mb-4">Get in Touch</h3>
+                    <p class="font-semibold text-xl">Krishna Birla</p>
+                    <p class="text-slate-300">[Your Email Address]</p>
+                    <p class="text-slate-300">[Your Phone Number]</p>
+                </div>
+            </div>
+            <div class="mt-12 text-center text-sm text-slate-400 border-t border-teal-800 pt-8">
+                <p>&copy; 2025 Archiscan AI Proposal. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animated Stats
+            const statCounters = document.querySelectorAll('[data-stat]');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const el = entry.target;
+                        const target = +el.getAttribute('data-stat');
+                        let current = 0;
+                        const increment = target / 100;
+                        const timer = setInterval(() => {
+                            current += increment;
+                            el.textContent = Math.ceil(current) + '%';
+                            if (current >= target) {
+                                clearInterval(timer);
+                                el.textContent = target + '%';
+                            }
+                        }, 20);
+                        observer.unobserve(el);
+                    }
+                });
+            }, { threshold: 0.5 });
+            statCounters.forEach(counter => observer.observe(counter));
+
+            // Smooth Scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+
+            // Risk Chart
+            const riskCtx = document.getElementById('riskChart').getContext('2d');
+            new Chart(riskCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Manual Survey (2-5% Error)', 'Archiscan AI (<0.5% Error)'],
+                    datasets: [{
+                        label: 'Potential Rework Cost (in Lakhs ₹)',
+                        data: [35, 2],
+                        backgroundColor: ['#ff6361', '#008080'],
+                        borderColor: ['#ff6361', '#008080'],
+                        borderWidth: 1,
+                        barThickness: 50,
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: { x: { beginAtZero: true, title: { display: true, text: 'Cost in Lakhs (₹)' } } },
+                    plugins: { legend: { display: false } }
+                }
+            });
+
+            // Timeline Chart
+            const timelineCtx = document.getElementById('timelineChart').getContext('2d');
+            new Chart(timelineCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Manual Process', 'Archiscan AI Process'],
+                    datasets: [
+                        { label: 'Surveying & Drafting', data: [21, 2], backgroundColor: '#ff6361' },
+                        { label: 'Project Planning', data: [21, 21], backgroundColor: '#008080' }
+                    ]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: { stacked: true, title: { display: true, text: 'Days to Begin Planning' } },
+                        y: { stacked: true }
+                    },
+                    plugins: { legend: { position: 'bottom' } }
+                }
+            });
+
+            // Budget Chart
+            const budgetCtx = document.getElementById('budgetChart').getContext('2d');
+            new Chart(budgetCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Drone Components', 'Sensing & Computing', 'Software & Tools'],
+                    datasets: [{
+                        data: [31000, 40000, 15000],
+                        backgroundColor: ['#003f5c', '#008080', '#f59e0b'],
+                        borderColor: '#ffffff',
+                        borderWidth: 4,
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '70%',
+                    plugins: {
+                        legend: { position: 'bottom', labels: { boxWidth: 12, padding: 15 } },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.label || '';
+                                    if (label) { label += ': '; }
+                                    if (context.parsed !== null) {
+                                        label += '₹' + context.parsed.toLocaleString('en-IN');
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
