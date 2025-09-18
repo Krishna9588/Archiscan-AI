@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archiscan AI: Project Review Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #008080 0%, #004d4d 100%);
+        }
+        .accent-color { color: #008080; }
+        .accent-bg { background-color: #008080; }
+        .secondary-accent-bg { background-color: #ff6361; }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+        .section-title {
+            font-size: 2.25rem;
+            line-height: 2.5rem;
+            font-weight: 800;
+            color: #1e293b;
+            margin-bottom: 0.75rem;
+        }
+         @media (min-width: 768px) {
+            .section-title {
+                font-size: 2.75rem;
+                line-height: 3rem;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+<header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="index.html" class="text-2xl font-bold accent-color cursor-pointer">Archiscan AI</a>
+        <div class="hidden lg:flex space-x-6 font-bold text-slate-800 text-base">
+            <a href="index.html#team" class="hover:accent-color transition-colors">Team</a>
+            <a href="index.html#problem" class="hover:accent-color transition-colors">Problem</a>
+            <a href="index.html#how-it-works" class="hover:accent-color transition-colors">Working</a>
+            <a href="index.html#solution" class="hover:accent-color transition-colors">Solution</a>
+            <a href="index.html#applications" class="hover:accent-color transition-colors">Applications</a>
+            <a href="index.html#roi" class="hover:accent-color transition-colors">ROI</a>
+            <a href="index.html#plan" class="hover:accent-color transition-colors">Roadmap</a>
+            <a href="index.html#budget" class="hover:accent-color transition-colors">Sponsorship</a>
+            <a href="index.html#workflow" class="hover:accent-color transition-colors">Workflow</a>
+            <a href="index.html#vision" class="hover:accent-color transition-colors">Vision</a>
+            <a href="review.html" class="accent-color font-extrabold transition-colors">Project Review</a>
+        </div>
+        <a href="index.html#contact" class="hidden md:inline-block secondary-accent-bg text-white font-semibold px-6 py-2 rounded-lg hover:bg-red-500 transition-colors duration-300">Contact</a>
+    </nav>
+</header>
+
+<main class="container mx-auto px-6 py-16 md:py-24">
+    <div class="text-center mb-12">
+        <h1 class="section-title accent-color">Project Review Document</h1>
+        <p class="text-lg text-slate-500 max-w-3xl mx-auto">A detailed breakdown of the project's scope, architecture, timeline, and progress, ensuring alignment with our strategic goals.</p>
+    </div>
+    <div class="space-y-8 max-w-5xl mx-auto">
+        <!-- 1. Problem Statement -->
+        <div id="problem-statement" class="card p-8 scroll-mt-24">
+            <h3 class="text-2xl font-bold mb-4 accent-color">1. Problem Statement</h3>
+            <p class="text-slate-600 leading-relaxed">Manual architectural site surveys are a significant bottleneck in the Architecture, Engineering, and Construction (AEC) industry. The process is traditionally time-consuming, expensive, and susceptible to human error. These inefficiencies lead to project delays, budget overruns, and a high barrier to entry for smaller-scale projects that cannot afford extensive surveying costs.</p>
+        </div>
+
+        <!-- 2. Purpose, Scope, and Objectives -->
+        <div id="purpose" class="card p-8 scroll-mt-24">
+            <h3 class="text-2xl font-bold mb-4 accent-color">2. Purpose, Scope, and Objectives</h3>
+            <h4 class="text-xl font-semibold mt-4 mb-2">Purpose</h4>
+            <p class="text-slate-600">Archiscan-AI aims to revolutionize the architectural surveying and planning process by creating an integrated platform that leverages AI and drone technology. Our system automates data capture and generates accurate, regulation-compliant architectural blueprints, streamlining the workflow from site survey to ready-to-use plans.</p>
+            <h4 class="text-xl font-semibold mt-6 mb-2">Scope</h4>
+            <p class="text-slate-600">The project scope covers the end-to-end process from aerial data acquisition to the final output of 2D CAD drawings and 3D models. The current scope is focused on residential and small-scale commercial properties.</p>
+            <h4 class="text-xl font-semibold mt-6 mb-2">Objectives</h4>
+            <ul class="list-disc list-inside space-y-2 pl-4 text-slate-600">
+                <li><strong class="font-semibold text-slate-700">Automation:</strong> To develop autonomous drone flight paths for efficient and consistent site data collection.</li>
+                <li><strong class="font-semibold text-slate-700">Accuracy:</strong> To achieve a high degree of accuracy (error rate < 1%) in the generated blueprints compared to manual methods.</li>
+                <li><strong class="font-semibold text-slate-700">Speed:</strong> To drastically reduce the time for a site survey and initial plan generation from weeks to a few days.</li>
+                <li><strong class="font-semibold text-slate-700">Blueprint Generation:</strong> To create accurate and detailed 2D CAD floor plans and 3D models directly from the collected drone data.</li>
+                <li><strong class="font-semibold text-slate-700">User Platform:</strong> To develop a user-friendly interface for initiating surveys and accessing the generated project data.</li>
+            </ul>
+        </div>
+
+        <!-- 3. Abstract -->
+        <div id="abstract" class="card p-8 scroll-mt-24">
+            <h3 class="text-2xl font-bold mb-4 accent-color">3. Abstract (System Overview)</h3>
+            <p class="text-slate-600 leading-relaxed">Archiscan-AI presents an innovative solution to the inefficiencies of traditional land surveying. Our system integrates unmanned aerial vehicles (UAVs) with a powerful Artificial Intelligence backend to deliver an automated blueprint generation service. A custom-built drone with a high-resolution camera and RPLIDAR captures comprehensive site data. This data is then processed by a Convolutional Neural Network (CNN), which reconstructs the environment and generates precise 2D floor plans and 3D models. This automated workflow not only saves time and reduces costs but also minimizes the potential for human error.</p>
+        </div>
+
+        <!-- 4. Requirements -->
+        <div id="requirements" class="card p-8 scroll-mt-24">
+            <h3 class="text-2xl font-bold mb-4 accent-color">4. Requirements & Test Environment</h3>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="text-xl font-semibold mb-2">Hardware Requirements</h4>
+                    <ul class="list-disc list-inside space-y-2 text-slate-600">
+                        <li>Custom-built drone with camera & RPLIDAR A1/A2.</li>
+                        <li>Ground control station (Laptop/PC).</li>
+                        <li>High-performance computing environment (NVIDIA GPU).</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold mb-2">Software & Tools</h4>
+                    <ul class="list-disc list-inside space-y-2 text-slate-600">
+                        <li>Python, OpenCV, TensorFlow/PyTorch.</li>
+                        <li>DroneKit or similar flight control software.</li>
+                        <li>Datasets: Custom, synthetic, and Matterport3D.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. System Overview -->
+        <div id="system-overview" class="card p-8 scroll-mt-24">
+             <h3 class="text-2xl font-bold mb-4 accent-color">5. System Overview — Proposed System & Outcome</h3>
+             <h4 class="text-xl font-semibold mt-4 mb-2">Proposed System Workflow</h4>
+             <ol class="list-decimal list-inside space-y-2 pl-4 text-slate-600">
+                 <li><strong>Input (Data Capture):</strong> User defines survey area on our platform, drone flies autonomously capturing images and LiDAR scans.</li>
+                 <li><strong>Process (AI Generation):</strong> Data is uploaded to our cloud backend, where CNN algorithms process it to identify structural elements.</li>
+                 <li><strong>Output (Blueprint Delivery):</strong> The system generates and delivers regulation-ready 2D CAD files and 3D models to the user's dashboard.</li>
+             </ol>
+             <h4 class="text-xl font-semibold mt-6 mb-2">Proposed Outcome</h4>
+             <ul class="list-disc list-inside space-y-2 pl-4 text-slate-600">
+                 <li>A fully functional platform for commissioning surveys and receiving blueprints.</li>
+                 <li>Blueprint generation time under 48 hours.</li>
+                 <li>High-fidelity 2D plans and 3D models with verifiable accuracy.</li>
+                 <li>Lowered operational costs for builders by up to 60%.</li>
+             </ul>
+        </div>
+
+        <!-- 6. Architecture & Data Flow -->
+        <div id="architecture" class="card p-8 scroll-mt-24">
+            <h3 class="text-2xl font-bold mb-4 accent-color">6. System Architecture and Data Flow</h3>
+            <p class="mb-6 text-slate-600">The architecture is a modular, cloud-based system consisting of four primary components: the UAV Data Acquisition Unit, the Cloud Processing Platform, the AI Core, and the User-Facing Application.</p>
+            <div class="space-y-8 mb-8">
+                <div class="bg-slate-50 p-4 rounded-lg border">
+                    <h4 class="font-semibold text-lg text-center mb-2">System Architecture Diagram</h4>
+                    <div class="bg-white p-4 rounded">
+                        <img src="https://i.imgur.com/8V1t3W5.png" alt="System Architecture Diagram" class="mx-auto rounded-lg shadow-md">
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-4 rounded-lg border">
+                    <h4 class="font-semibold text-lg text-center mb-2">Data Flow Diagram (DFD)</h4>
+                    <div class="bg-white p-4 rounded">
+                         <img src="https://i.imgur.com/k2zP2Kk.png" alt="Data Flow Diagram" class="mx-auto rounded-lg shadow-md">
+                    </div>
+                </div>
+            </div>
+            <h4 class="text-xl font-semibold mt-6 mb-2">Data Flow Steps</h4>
+            <ol class="list-decimal list-inside space-y-2 pl-4 text-slate-600">
+                <li>User initiates a survey request on the platform.</li>
+                <li>Platform sends an optimized flight path to the drone.</li>
+                <li>Drone executes the mission and uploads raw data to cloud storage.</li>
+                <li>Backend pipeline pre-processes data, runs AI Core analysis, and synthesizes blueprints.</li>
+                <li>User is notified and can download the final files from the web dashboard.</li>
+            </ol>
+        </div>
+
+        <!-- 7. Risk Analysis -->
+        <div id="risk-analysis" class="card p-8 scroll-mt-24">
+            <h3 class="text-2xl font-bold mb-4 accent-color">7. Risk Analysis & Mitigation</h3>
+            <div class="space-y-6">
+                <div>
+                    <h4 class="text-xl font-semibold">Technical Risks:</h4>
+                    <p class="mt-2 text-slate-600"><strong>Risk:</strong> Inaccuracy in AI model predictions. <br><strong>Mitigation:</strong> Rigorous training, cross-validation, and human-in-the-loop verification.</p>
+                    <p class="mt-4 text-slate-600"><strong>Risk:</strong> GPS signal loss or sensor malfunction. <br><strong>Mitigation:</strong> Robust RTH safety protocols and pre-flight checks.</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold">Operational Risks:</h4>
+                    <p class="mt-2 text-slate-600"><strong>Risk:</strong> Navigating aviation regulations. <br><strong>Mitigation:</strong> Integrate real-time airspace maps for compliance.</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold">Schedule Risks:</h4>
+                    <p class="mt-2 text-slate-600"><strong>Risk:</strong> Delays in acquiring training data. <br><strong>Mitigation:</strong> Augment with synthetic data and use transfer learning.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 8. Project Plan -->
+        <div id="project-plan" class="card p-8 scroll-mt-24">
+            <h3 class="text-2xl font-bold mb-4 accent-color">8. Project Plan & Milestones</h3>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left">
+                    <thead class="border-b-2 border-slate-200">
+                        <tr>
+                            <th class="py-3 pr-4 font-semibold">Phase</th>
+                            <th class="py-3 px-4 font-semibold">Task Description</th>
+                            <th class="py-3 pl-4 font-semibold">Timeline</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-slate-700">
+                        <tr class="border-b border-slate-100"><td class="py-3 pr-4">Phase 1: Research</td><td class="py-3 px-4">Literature Review, Tech Stack Selection, Drone Design</td><td class="py-3 pl-4">2 Weeks</td></tr>
+                        <tr class="border-b border-slate-100"><td class="py-3 pr-4">Phase 2: Drone Dev</td><td class="py-3 px-4">Build and test drone, integrate sensors</td><td class="py-3 pl-4">3 Weeks</td></tr>
+                        <tr class="border-b border-slate-100"><td class="py-3 pr-4">Phase 3: Data Acq.</td><td class="py-3 px-4">Collect, pre-process, and label initial datasets</td><td class="py-3 pl-4">2 Weeks</td></tr>
+                        <tr class="border-b border-slate-100"><td class="py-3 pr-4">Phase 4: AI Model</td><td class="py-3 px-4">Develop and train the core CNN model</td><td class="py-3 pl-4">4 Weeks</td></tr>
+                        <tr class="border-b border-slate-100"><td class="py-3 pr-4">Phase 5: Platform</td><td class="py-3 px-4">Develop backend and user-facing web platform</td><td class="py-3 pl-4">3 Weeks</td></tr>
+                        <tr class="border-b border-slate-100"><td class="py-3 pr-4">Phase 6: Integration</td><td class="py-3 px-4">Integrate AI model with the platform and test workflow</td><td class="py-3 pl-4">2 Weeks</td></tr>
+                        <tr class="border-b border-slate-100"><td class="py-3 pr-4">Phase 7: Testing</td><td class="py-3 px-4">Conduct real-world beta tests and gather feedback</td><td class="py-3 pl-4">2 Weeks</td></tr>
+                        <tr><td class="py-3 pr-4">Phase 8: Finalize</td><td class="py-3 px-4">Bug fixes, documentation, and final presentation prep</td><td class="py-3 pl-4">1 Week</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 9. References -->
+        <div id="references" class="card p-8 scroll-mt-24">
+            <h3 class="text-2xl font-bold mb-4 accent-color">9. References</h3>
+            <ul class="list-disc list-inside space-y-2 pl-4 text-slate-600">
+                <li>Schönberger, J. L., & Frahm, J. M. (2016). Structure-from-motion revisited. In *CVPR*.</li>
+                <li>Mur-Artal, R., et al. (2015). ORB-SLAM: a versatile and accurate monocular SLAM system. *IEEE T-RO*.</li>
+                <li>He, K., et al. (2017). Mask R-CNN. In *ICCV*.</li>
+                <li>Official OpenCV Documentation: <a href="https://docs.opencv.org/" target="_blank" class="accent-color hover:underline">docs.opencv.org</a></li>
+                <li>Official TensorFlow Documentation: <a href="https://www.tensorflow.org/" target="_blank" class="accent-color hover:underline">www.tensorflow.org</a></li>
+            </ul>
+        </div>
+
+        <!-- 10. Progress to Date -->
+        <div id="progress" class="card p-8 scroll-mt-24">
+            <h3 class="text-2xl font-bold mb-4 accent-color">10. Progress to Date</h3>
+            <div class="space-y-4">
+                <div class="p-4 bg-green-100 text-green-800 rounded-lg border border-green-200">
+                    <h4 class="font-bold">Phase 1 (Research) - Completed</h4>
+                    <p>Conducted literature review and finalized the core technology stack.</p>
+                </div>
+                 <div class="p-4 bg-green-100 text-green-800 rounded-lg border border-green-200">
+                    <h4 class="font-bold">Phase 2 (Drone Development) - Completed</h4>
+                    <p>Assembled custom drone, integrated sensors, and conducted stable flight tests.</p>
+                </div>
+                 <div class="p-4 bg-blue-100 text-blue-800 rounded-lg border border-blue-200">
+                    <h4 class="font-bold">Phase 3 (Data Acquisition) - In Progress</h4>
+                    <p>Began data acquisition flights and are pre-processing/labeling the initial dataset.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="hero-gradient text-white">
+    <div class="container mx-auto px-8 py-12">
+        <div class="grid md:grid-cols-2 gap-8 text-center md:text-left">
+            <div>
+                <h3 class="text-xl font-bold mb-4">Key References & Research</h3>
+                <ul class="space-y-2 text-slate-300">
+                    <li><a href="#" class="hover:text-white transition-colors">The Rise of Digital Twins in AEC</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Advancements in LiDAR SLAM Technology</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Market Report: AI in the Construction Industry</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Generative AI for Architectural Design</a></li>
+                </ul>
+            </div>
+            <div class="md:text-right">
+                <h3 class="text-xl font-bold mb-4">Get in Touch</h3>
+                <div class="space-y-4 text-lg">
+                    <div>
+                        <p class="font-semibold">Krishna Birla</p>
+                        <p class="text-slate-300 text-base">krishnabirla336@gmail.com</p>
+                            <a href="https://github.com/Krishna9588" target="_blank" class="inline-flex items-center gap-2 text-slate-300 hover:text-white transition-colors text-base">
+                                <svg class="w-4 h-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+                                Krishna9588
+                            </a>
+                    </div>
+                    <div>
+                        <p class="font-semibold">Nimish Hande</p>
+                        <p class="text-slate-300 text-base">nimishhande@gmail.com</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold">Ricky Ramteke</p>
+                        <p class="text-slate-300 text-base">rickyramteke40@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-14 text-center text-sm text-slate-400 border-t border-teal-800 pt-4">
+            <p>Archiscan AI Proposal - September 2025</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
+
